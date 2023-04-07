@@ -5,13 +5,14 @@
     "express-handlebars": "^7.0.4",
     "handlebars": "^4.7.7",
     "hbs": "^4.2.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.2.0",
     "path": "^0.12.7"
   },
   "name": "mysql-test",
   "description": "a test for database",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "test": "node index.js"
   },
