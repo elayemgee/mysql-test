@@ -17,8 +17,8 @@ app.use(express.static('public'));
 
 const mysql = require('mysql2');
 var con = mysql.createConnection({
-    host: 'ccscloud3.dlsu.edu.ph',
-    port: '39000',
+    host: 'localhost',
+    port: '3600',
     user: 'dev',
     password: '12341234'
 });
