@@ -18,7 +18,7 @@ app.use(express.static('public'));
 const mysql = require('mysql2');
 var con = mysql.createConnection({
     host: 'localhost',
-    port: '3600',
+    port: '3306',
     user: 'dev',
     password: '12341234'
 });
