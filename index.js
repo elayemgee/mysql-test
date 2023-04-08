@@ -17,9 +17,9 @@ app.use(express.static('public'));
 
 const mysql = require('mysql2');
 var con = mysql.createConnection({
-    host: '172.16.3.101',
+    host: '172.16.3.142',
     port: '3306',
-    user: 'dev',
+    user: 'group16',
     password: '12341234'
 });
 
@@ -34,13 +34,12 @@ con.connect(function (err) {
 
 app.get('/', function (req, res) {
     //   res.sendFile(path.join(__dirname, '/index.html'));
-    var query = "SELECT * FROM imdb.movies LIMIT 10;"
+    var query = "SELECT * FROM movies.central LIMIT 10;"
     con.query(query, function (error, results, fields) {
         if (error) throw error;
         console.log(results);
         // connected!
-
-        res.render('index', { tuple: results });
+       res.render('index', { tuple: results });
     });
 });
 
